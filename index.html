@@ -60,6 +60,70 @@ h2{font-size:16px;margin:18px 0 10px}
 .groups{grid-template-columns:repeat(3,minmax(0,1fr))}
 .available{grid-template-columns:repeat(5,minmax(0,1fr))}
 }
+ 
+/* 그룹을 가로 한 줄로 표시 */
+.groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 7px 9px;
+  border-radius: 9px;
+  gap: 8px;
+}
+
+.ghead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  min-width: 76px;
+  margin-bottom: 0;
+  gap: 2px;
+}
+
+.ghead strong {
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.count {
+  font-size: 10px;
+}
+
+.chips {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.chip {
+  font-size: 13px;
+  padding: 6px 7px;
+  border-radius: 6px;
+}
+
+.empty {
+  padding: 0;
+}
+
+/* PC에서도 동일하게 한 줄에 한 그룹 */
+@media (min-width: 650px) {
+  .groups {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 </head>
 <body>
